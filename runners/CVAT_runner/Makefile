@@ -1,5 +1,6 @@
 REPO_URL = https://github.com/cvat-ai/cvat.git
 REPO_DIR = cvat
+SERVERLESS_DIR = components/serverless
 
 .PHONY: all clone build up down clean
 
@@ -13,15 +14,15 @@ clone:
 
 # Сборка контейнеров
 build: clone
-	cd $(REPO_DIR) && docker compose build
+	cd $(REPO_DIR) && docker compose -f docker-compose.yml -f $(SERVERLESS_DIR)/docker-compose.serverless.yml build
 
 # Запуск контейнеров
 up: build
-	cd $(REPO_DIR) && docker compose up -d
+	cd $(REPO_DIR) && docker compose -f docker-compose.yml -f $(SERVERLESS_DIR)/docker-compose.serverless.yml up -d
 
 # Остановка контейнеров
 down:
-	cd $(REPO_DIR) && docker compose down
+	cd $(REPO_DIR) && docker compose -f docker-compose.yml -f $(SERVERLESS_DIR)/docker-compose.serverless.yml down
 
 # Создание суперпользователя
 createsuperuser:

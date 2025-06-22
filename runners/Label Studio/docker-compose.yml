@@ -10,3 +10,5 @@ services:
       - ./data:/label-studio/data
     restart: unless-stopped
     user: "1001:1001"
+    environment:
+      - LABEL_STUDIO_ML_BACKEND_V2=true

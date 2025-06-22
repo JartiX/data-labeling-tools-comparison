@@ -1,2 +1,6 @@
 /runners/CVAT_runner/cvat
 /runners/Label Studio/data
+/datasets
+src/ms_coco/annotations/instances_train2017.json
+*.pyc
+src/tests/tokens.py
