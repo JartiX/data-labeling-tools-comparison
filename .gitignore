@@ -4,3 +4,4 @@
 src/ms_coco/annotations/instances_train2017.json
 *.pyc
 src/tests/tokens.py
+/runners/Label Studio/label-studio-ml-backend
