@@ -1,0 +1,2 @@
+0 0 0 background
+67 198 241 sun
