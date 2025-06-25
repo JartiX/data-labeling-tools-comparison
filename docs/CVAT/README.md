@@ -48,30 +48,7 @@ nano "runners/CVAT_runner/cvat/docker-compose.yml
 
 ## Развёртка сервиса на платформе виртуализации proxmox
 
-1. Устанавливаем Docker, Docker compose
-
-```
-sudo apt-get update
-sudo apt-get --no-install-recommends install -y \
-  apt-transport-https \
-  ca-certificates \
-  curl \
-  gnupg-agent \
-  software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository \
-  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) \
-  stable"
-sudo apt-get update
-sudo apt-get --no-install-recommends install -y \
-  docker-ce docker-ce-cli containerd.io docker-compose-plugin
-```  
-Чтобы не писать sudo каждый раз, вводим следующие команды:  
-```  
-sudo groupadd docker
-sudo usermod -aG docker $USER
-```
+1. Устанавливаем Docker, [Docker compose](../docker_install.md)
 
 2. Клонируем репозиторий
 
@@ -99,6 +76,6 @@ docker compose up -d
 ## Важно!
 
 * После установки должно оставаться как минимум 10% свободного дискового пространства, иначе инструмент работать не будет.
-* Для работы Makefile **необходимо**, чтобы на системе был установлен `docker`, `docker compose` и `make`.
+* Для работы Makefile **необходимо**, чтобы на системе был установлен [docker и docker compose](../docker_install.md) и `make`.
 * Для Windows необходимо запускать Makefile из Git Bash или WSL.
 * Команда `createsuperuser` требует, чтобы сервисы CVAT были запущены.

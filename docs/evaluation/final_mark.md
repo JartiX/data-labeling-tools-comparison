@@ -8,7 +8,7 @@
 | **Можно ли размечать видео?**                                  | Да                                    | Да                                                              |
 | **Требуемый размер оперативной памяти**                        | 4-8 ГБ                                | 6-16 ГБ                                                         |
 | **Требует ли GPU для работы?**                                 | Нет                                   | Нет                                                             |
-| **Основные поддерживаемые форматы датасетов**                  | COCO, YOLO, Pascal VOC, CSV, JSON     | COCO, YOLO, Pascal VOC, ImageNet, CVAT, LabelMe,MOT, TF Records |
+| **Основные поддерживаемые форматы датасетов**                  | CSV, JSON     | COCO, YOLO, Pascal VOC, ImageNet, CVAT, LabelMe,MOT, TF Records |
 | **Есть ли автоматизированный помощник выделения масок?**       | Да (ML-backend)                       | Да (semi-automatic, AI-assisted, Serverless functions)          |
 | **Позволяет ли размечать временные ряды?**                     | Да                                    | Нет                                                             |
 | **Позволяет ли размечать табличные данные?**                   | Да                                    | Нет                                                             |

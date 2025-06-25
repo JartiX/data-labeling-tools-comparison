@@ -75,3 +75,7 @@ services:
     environment:
       - LABEL_STUDIO_ML_BACKEND_V2=true
 ```
+
+## Важно!
+
+* Для работы **необходимо**, чтобы на системе был установлен [docker и docker compose](../docker_install.md).
