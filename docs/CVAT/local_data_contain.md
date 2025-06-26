@@ -24,9 +24,10 @@ mkdir data
 docker run --rm -v {название образа данных}:/source -v "$(pwd)/data":/dest alpine cp -r /source/. /dest/
 ```
 
-## 4. Изменяем docker-compose.yml  
-Меняем cvat_data volume в конце файла на
+## 4. Изменяем docker-compose.override.yml  
+Меняем cvat_data volume на такое
 ```
+volumes:
   cvat_data:
     driver: local
     driver_opts:
